@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://risingstr.github.io/guru-prasad-ramgopal-and-sons/sitemap.xml
