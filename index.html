@@ -281,6 +281,27 @@ footer { background:#0a0908; padding:40px 5vw; display:flex; align-items:center;
   .form-row{grid-template-columns:1fr;}
   .kurlon-section{padding:24px 20px;}
 }
+
+/* PROOF OF WORK */
+.proof { background:var(--dark); }
+.proof .section-title { color:#fff; }
+.proof .section-desc { color:rgba(255,255,255,0.5); max-width:620px; }
+.proof-grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:16px; margin-top:48px; align-items:start; }
+.proof-video { position:relative; width:100%; aspect-ratio:16/9; background:#000; border:1px solid var(--border); overflow:hidden; }
+.proof-video video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:contain; background:#000; }
+.proof-photos { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
+.proof-photo { position:relative; width:100%; aspect-ratio:4/3; border:1px solid var(--border); overflow:hidden; background:var(--dark2); }
+.proof-photo img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+.proof-photo:hover img { transform:scale(1.04); }
+.proof-tag { position:absolute; left:0; bottom:0; z-index:2; background:rgba(20,18,16,0.85); color:var(--gold); font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; padding:8px 14px; }
+.proof-cta { margin-top:40px; display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+.proof-cta p { color:rgba(255,255,255,0.5); font-size:14px; font-weight:300; }
+@media(max-width:768px){
+  .proof { padding:70px 5vw; }
+  .proof-grid { grid-template-columns:minmax(0,1fr); margin-top:32px; }
+  .proof-photos { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .proof-photo { aspect-ratio:4/5; }
+}
 </style>
 </head>
 <body>
@@ -288,6 +309,7 @@ footer { background:#0a0908; padding:40px 5vw; display:flex; align-items:center;
 <nav>
   <div class="nav-brand">गुरु प्रसाद <span>रामगोपाल</span> एंड संस</div>
   <ul class="nav-links">
+    <li><a href="#proof" class="t" data-hi="हमारा काम" data-en="Our Work">हमारा काम</a></li>
     <li><a href="#products" class="t" data-hi="उत्पाद" data-en="Products">उत्पाद</a></li>
     <li><a href="#clients" class="t" data-hi="सरकारी ग्राहक" data-en="Govt Clients">सरकारी ग्राहक</a></li>
     <li><a href="#packages" class="t" data-hi="पैकेज" data-en="Packages">पैकेज</a></li>
@@ -339,6 +361,34 @@ footer { background:#0a0908; padding:40px 5vw; display:flex; align-items:center;
 <div class="institutional-strip">
   <p class="t" data-hi="★ सरकारी · संस्थागत · निजी अस्पताल · कॉर्पोरेट ऑर्डर में विशेषज्ञ — बल्क सप्लाई उपलब्ध ★" data-en="★ Specialists in Govt · Institutional · Private Hospital · Corporate Orders — Bulk Supply Available ★">★ सरकारी · संस्थागत · निजी अस्पताल · कॉर्पोरेट ऑर्डर में विशेषज्ञ — बल्क सप्लाई उपलब्ध ★</p>
 </div>
+
+<!-- PROOF OF WORK -->
+<section class="proof" id="proof">
+  <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span class="t" data-hi="हमारा काम" data-en="Proof of Work">हमारा काम</span></div>
+  <h2 class="section-title t" data-hi="बातें नहीं,<br><em>काम बोलता है।</em>" data-en="Our work speaks<br><em>for itself.</em>">बातें नहीं,<br><em>काम बोलता है।</em></h2>
+  <p class="section-desc t" data-hi="1989 से सतना और आसपास के घरों, दफ़्तरों और संस्थानों में हमारा असली काम — खुद देखें और भरोसा करें।" data-en="Real installations by our team in homes, offices and institutions across Satna since 1989 — see it yourself and decide.">1989 से सतना और आसपास के घरों, दफ़्तरों और संस्थानों में हमारा असली काम — खुद देखें और भरोसा करें।</p>
+  <div class="proof-grid">
+    <div class="proof-video">
+      <video controls playsinline preload="metadata" aria-label="Process video">
+        <source src="https://risingstr.github.io/guru-prasad-ramgopal-and-sons/images/process.mp4#t=0.1" type="video/mp4">
+      </video>
+    </div>
+    <div class="proof-photos">
+      <figure class="proof-photo">
+        <img src="https://risingstr.github.io/guru-prasad-ramgopal-and-sons/images/before.jpeg" alt="Before the work - Guru Prasad Ramgopal & Sons" loading="lazy">
+        <figcaption class="proof-tag t" data-hi="पहले" data-en="Before">पहले</figcaption>
+      </figure>
+      <figure class="proof-photo">
+        <img src="https://risingstr.github.io/guru-prasad-ramgopal-and-sons/images/after.jpeg" alt="After the work - Guru Prasad Ramgopal & Sons" loading="lazy">
+        <figcaption class="proof-tag t" data-hi="बाद में" data-en="After">बाद में</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="proof-cta">
+    <a href="#contact" class="btn-primary t" data-hi="अपने प्रोजेक्ट के बारे में पूछें" data-en="Enquire About Your Project">अपने प्रोजेक्ट के बारे में पूछें</a>
+    <p class="t" data-hi="मुफ़्त सलाह और कोटेशन — सतना व आसपास" data-en="Free advice &amp; quotation — Satna &amp; nearby">मुफ़्त सलाह और कोटेशन — सतना व आसपास</p>
+  </div>
+</section>
 
 <!-- PRODUCTS -->
 <section class="products" id="products">
@@ -738,7 +788,7 @@ footer { background:#0a0908; padding:40px 5vw; display:flex; align-items:center;
       <div class="pkg-price">₹44,999</div>
       <div class="pkg-price-note t" data-hi="हमारा सबसे लोकप्रिय पैकेज" data-en="Our most chosen package">हमारा सबसे लोकप्रिय पैकेज</div>
       <div class="pkg-divider"></div>
-      <div class="pkg-item"><span class="pkg-dot"></span><span class="t" data-hi="900 वर्ग फुट तक 1.5mm PVC फ्लोरिंग" data-en="Premium 1.5mm PVC flooring up to 900 sq ft">900 वर्ग फुट तक 1.5mm PVC फ्लोरिंग</span></div>
+      <div class="pkg-item"><span class="pkg-dot"></span><span class="t" data-hi="900 वर्ग फुट तक 1.5mm PVC फ्लोरिंग" data-en="Premium 0.65mm PVC flooring up to 900 sq ft">900 वर्ग फुट तक 0.65mm PVC फ्लोरिंग</span></div>
       <div class="pkg-item"><span class="pkg-dot"></span><span class="t" data-hi="सभी कमरों के लिए डिज़ाइनर पर्दे" data-en="Designer curtains for all rooms">सभी कमरों के लिए डिज़ाइनर पर्दे</span></div>
       <div class="pkg-item"><span class="pkg-dot"></span><span class="t" data-hi="3 प्रीमियम जूट डोरमैट" data-en="3 premium jute doormats">3 प्रीमियम जूट डोरमैट</span></div>
       <div class="pkg-item"><span class="pkg-dot"></span><span class="t" data-hi="मुफ़्त घर पर माप विज़िट" data-en="Free home measurement visit">मुफ़्त घर पर माप विज़िट</span></div>
